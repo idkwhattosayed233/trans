@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Alicante & Valencia VIP Transfers | Private Airport Transfers</title>
+  <meta name="description" content="Private transfers in Alicante, Costa Blanca, Benidorm and Valencia. Airport pickups, hotels and long-distance journeys. Solicita tu presupuesto por WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: "#0a0a0a",
+            graphite: "#121212",
+            gold: "#d4af37",
+            champagne: "#e8d39a"
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Manrope", "sans-serif"]
+          },
+          boxShadow: {
+            luxury: "0 25px 80px rgba(0,0,0,.35)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .hero-glow {
+      background:
+        radial-gradient(circle at 80% 25%, rgba(212,175,55,.14), transparent 32%),
+        radial-gradient(circle at 10% 90%, rgba(212,175,55,.07), transparent 35%);
+    }
+
+    .gold-text {
+      background: linear-gradient(120deg, #d4af37, #f4e3a7, #c49b25);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .glass {
+      background: rgba(255,255,255,.035);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .luxury-border {
+      border: 1px solid rgba(255,255,255,.09);
+    }
+
+    .gold-border {
+      border: 1px solid rgba(212,175,55,.32);
+    }
+
+    .card-hover {
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,.45);
+    }
+
+    .form-field {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111;
+      color: #fff;
+      outline: none;
+      transition: border-color .2s ease;
+      color-scheme: dark;
+    }
+
+    .form-field:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 0 2px rgba(212,175,55,.10);
+    }
+
+    .form-field::placeholder {
+      color: #777;
+    }
+
+    .form-field option {
+      background: #111;
+      color: #fff;
+    }
+
+    .whatsapp-pulse {
+      animation: waPulse 2.5s infinite;
+    }
+
+    @keyframes waPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,.25);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(37,211,102,0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/5">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3">
+      <a href="#inicio" class="flex items-center gap-2.5 shrink-0" aria-label="Alicante and Valencia VIP Transfers, inicio">
+        <div class="w-10 h-10 rounded-xl gold-border flex items-center justify-center">
+          <span class="font-display text-xl font-extrabold gold-text">V</span>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-[11px] sm:text-sm tracking-wide">
+            ALICANTE <span class="text-[#d4af37]">&</span> VALENCIA
+          </div>
+          <div class="text-[#d4af37] text-[9px] sm:text-[10px] font-bold tracking-[.22em]">
+            VIP TRANSFERS
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-4">
+        <div class="flex items-center gap-1 rounded-full border border-white/10 p-1 text-xs font-bold" aria-label="Language selector">
+          <button type="button" id="langES" class="language-button rounded-full px-2.5 py-1.5 bg-[#d4af37] text-black" aria-pressed="true" onclick="setLanguage('es')">
+            🇪🇸 ES
+          </button>
+          <button type="button" id="langEN" class="language-button rounded-full px-2.5 py-1.5 text-zinc-400 hover:text-white" aria-pressed="false" onclick="setLanguage('en')">
+            🇬🇧 EN
+          </button>
+        </div>
+
+        <a href="#reserva" class="hidden sm:inline-flex items-center justify-center rounded-lg bg-white text-black hover:bg-[#d4af37] px-4 py-3 text-xs sm:text-sm font-bold transition">
+          <span data-i18n="navCTA">Reservar Transfer</span>
+          <span class="ml-2" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="#reserva" class="sm:hidden rounded-lg bg-[#d4af37] text-black px-3 py-2.5 text-xs font-bold">
+          <span data-i18n="navShort">Reservar</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="relative overflow-hidden min-h-[90vh] flex items-center pt-28 pb-16">
+      <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+      <div class="absolute inset-0 opacity-[.025] pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:65px 65px;"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-4xl">
+          <div class="inline-flex flex-wrap items-center gap-2 rounded-full glass luxury-border px-4 py-2 mb-7 text-xs text-zinc-300">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+            <span data-i18n="heroBadge">Transporte privado · Alicante & Valencia</span>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="text-[10px] sm:text-xs font-semibold tracking-wide text-[#e8d39a] gold-border rounded-full px-3 py-1.5">
+              🇬🇧 UK & International Tourist Support
+            </span>
+            <span class="text-[10px] sm:text-xs font-semibold tracking-wide text-zinc-300 luxury-border rounded-full px-3 py-1.5">
+              English-speaking service*
+            </span>
+          </div>
+
+          <h1 class="font-display font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-7xl leading-[1.08]">
+            <span data-i18n="heroLine1">Tu transporte privado</span>
+            <span class="gold-text block" data-i18n="heroLine2">de primera clase</span>
+            <span data-i18n="heroLine3">en Alicante y Valencia</span>
+          </h1>
+
+          <p class="max-w-2xl mt-6 text-base sm:text-lg text-zinc-400 leading-relaxed" data-i18n="heroDescription">
+            Traslados al Aeropuerto de Alicante-Elche, hoteles de la Costa Blanca,
+            Benidorm, Torrevieja y conexiones con Valencia. Comodidad,
+            atención personalizada y presupuestos a medida.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 mt-9">
+            <a href="#reserva" class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-xl px-6 py-4 transition">
+              <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.85 11.85 0 0 0 12.05 0C5.49 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.59 5.95L.08 24l6.3-1.64a11.9 11.9 0 0 0 5.67 1.44h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.43-8.42ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.89 9.89 0 1 1 8.39 4.63Z"/>
+              </svg>
+              <span data-i18n="heroCTA">Solicitar transfer</span>
+            </a>
+
+            <a href="#rutas" class="inline-flex items-center justify-center gap-2 gold-border text-[#e8d39a] hover:bg-[#d4af37]/10 rounded-xl px-6 py-4 font-semibold transition">
+              <span data-i18n="heroSecondary">Ver rutas frecuentes</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/10 mt-11 max-w-3xl">
+            <div class="bg-[#0a0a0a] p-4 sm:p-5">
+              <div class="text-[#d4af37] font-display font-extrabold text-lg">COSTA BLANCA</div>
+              <p class="text-xs text-zinc-500 mt-1" data-i18n="stat1">Alicante y alrededores</p>
+            </div>
+            <div class="bg-[#0a0a0a] p-4 sm:p-5">
+              <div class="text-[#d4af37] font-display font-extrabold text-lg">FIXED QUOTE</div>
+              <p class="text-xs text-zinc-500 mt-1" data-i18n="stat2">Presupuesto antes de reservar</p>
+            </div>
+            <div class="bg-[#0a0a0a] p-4 sm:p-5">
+              <div class="text-[#d4af37] font-display font-extrabold text-lg">VIP SERVICE</div>
+              <p class="text-xs text-zinc-500 mt-1" data-i18n="stat3">Traslados privados a medida</p>
+            </div>
+          </div>
+
+          <p class="mt-4 text-[10px] text-zinc-600" data-i18n="heroNote">
+            *Confirma disponibilidad de atención en inglés y características del vehículo al reservar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         BOOKING FORM
+    ========================================== -->
+    <section id="reserva" class="py-20 lg:py-28 bg-[#101010]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-16 items-start">
+
+          <div class="lg:sticky lg:top-28">
+
+            <span class="text-[#d4af37] uppercase tracking-[.22em] text-xs font-bold"
+                  data-i18n="formEyebrow">
+              Solicitud de reserva
+            </span>
+
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold mt-4 leading-tight"
+                data-i18n="formTitle">
+              Tu viaje comienza aquí.
+            </h2>
+
+            <p class="text-zinc-400 leading-relaxed mt-5"
+               data-i18n="formIntro">
+              Cuéntanos los detalles del traslado. Prepararemos tu solicitud
+              para que puedas enviarla por WhatsApp y recibir una tarifa
+              personalizada según la ruta y tus necesidades.
+            </p>
+
+            <div class="mt-8 space-y-4">
+
+              <div class="flex items-start gap-3">
+                <span class="text-[#d4af37] text-lg">01</span>
+                <div>
+                  <p class="font-semibold text-sm" data-i18n="step1Title">Completa el formulario</p>
+                  <p class="text-xs text-zinc-500 mt-1" data-i18n="step1Desc">Origen, destino, fecha y pasajeros.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-[#d4af37] text-lg">02</span>
+                <div>
+                  <p class="font-semibold text-sm" data-i18n="step2Title">Envía tu solicitud</p>
+                  <p class="text-xs text-zinc-500 mt-1" data-i18n="step2Desc">WhatsApp abrirá el mensaje preparado.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-[#d4af37] text-lg">03</span>
+                <div>
+                  <p class="font-semibold text-sm" data-i18n="step3Title">Confirma tu presupuesto</p>
+                  <p class="text-xs text-zinc-500 mt-1" data-i18n="step3Desc">El precio se confirma antes de reservar.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-8 rounded-xl bg-[#d4af37]/5 gold-border p-4">
+              <p class="text-sm text-[#e8d39a] font-semibold" data-i18n="formTipTitle">
+                ¿Llegas en avión?
+              </p>
+              <p class="text-xs text-zinc-400 mt-1 leading-relaxed" data-i18n="formTip">
+                Añade tu número de vuelo para facilitar la coordinación de la recogida.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Form: generates WhatsApp message -->
+          <form id="bookingForm"
+                class="glass luxury-border rounded-2xl p-5 sm:p-7 lg:p-8 shadow-luxury">
+
+            <div class="flex items-center justify-between gap-3 mb-7">
+              <h3 class="font-display text-xl font-bold" data-i18n="formCardTitle">
+                Detalles del traslado
+              </h3>
+              <span class="text-[10px] text-zinc-500 uppercase tracking-widest">VIP TRANSFERS</span>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+
+              <!-- Pickup -->
+              <div class="sm:col-span-2">
+                <label for="pickup" class="block text-sm font-semibold mb-2"
+                       data-i18n="pickupLabel">Origen / Dirección de recogida *</label>
+                <input id="pickup" name="pickup" type="text" required maxlength="200"
+                       autocomplete="street-address"
+                       class="form-field"
+                       placeholder="Aeropuerto, dirección, hotel..."
+                       data-i18n-placeholder="pickupPlaceholder">
+              </div>
+
+              <!-- Destination -->
+              <div class="sm:col-span-2">
+                <label for="destination" class="block text-sm font-semibold mb-2"
+                       data-i18n="destinationLabel">Destino / Hotel *</label>
+                <input id="destination" name="destination" type="text" required maxlength="200"
+                       autocomplete="off"
+                       class="form-field"
+                       placeholder="Benidorm, Alicante, Valencia..."
+                       data-i18n-placeholder="destinationPlaceholder">
+              </div>
+
+              <!-- Passengers -->
+              <div>
+                <label for="passengers" class="block text-sm font-semibold mb-2"
+                       data-i18n="passengersLabel">Número de pasajeros *</label>
+                <select id="passengers" name="passengers" required class="form-field">
+                  <option value="" data-i18n="selectPassengers">Seleccionar</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+              </div>
+
+              <!-- Luggage -->
+              <div>
+                <label for="luggage" class="block text-sm font-semibold mb-2"
+                       data-i18n="luggageLabel">Número de maletas *</label>
+                <select id="luggage" name="luggage" required class="form-field">
+                  <option value="" data-i18n="selectLuggage">Seleccionar</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6+">6+</option>
+                </select>
+              </div>
+
+              <!-- Date -->
+              <div>
+                <label for="date" class="block text-sm font-semibold mb-2"
+                       data-i18n="dateLabel">Fecha del traslado *</label>
+                <input id="date" name="date" type="date" required class="form-field">
+              </div>
+
+              <!-- Time -->
+              <div>
+                <label for="time" class="block text-sm font-semibold mb-2"
+                       data-i18n="timeLabel">Hora de recogida / llegada *</label>
+                <input id="time" name="time" type="time" required class="form-field">
+              </div>
+
+              <!-- Flight -->
+              <div class="sm:col-span-2">
+                <label for="flight" class="block text-sm font-semibold mb-2">
+                  <span data-i18n="flightLabel">Número de vuelo</span>
+                  <span class="text-zinc-500 font-normal" data-i18n="optional">(opcional)</span>
+                </label>
+                <input id="flight" name="flight" type="text" maxlength="50"
+                       class="form-field"
+                       placeholder="Ej. BA1234"
+                       data-i18n-placeholder="flightPlaceholder">
+                <p class="text-xs text-zinc-500 mt-2" data-i18n="flightHelp">
+                  Si no viajas en avión, puedes dejar este campo vacío.
+                </p>
+              </div>
+
+              <!-- Extra details -->
+              <div class="sm:col-span-2">
+                <label for="notes" class="block text-sm font-semibold mb-2">
+                  <span data-i18n="notesLabel">Detalles adicionales</span>
+                  <span class="text-zinc-500 font-normal" data-i18n="optional">(opcional)</span>
+                </label>
+                <textarea id="notes" name="notes" rows="3" maxlength="500"
+                          class="form-field resize-y"
+                          placeholder="Sillas infantiles, necesidades especiales, hora del vuelo..."
+                          data-i18n-placeholder="notesPlaceholder"></textarea>
+              </div>
+
+            </div>
+
+            <!-- Consent -->
+            <div class="mt-5">
+              <label class="flex items-start gap-3 text-xs text-zinc-400 leading-relaxed">
+                <input id="privacyConsent" type="checkbox" required
+                       class="mt-1 accent-[#d4af37] shrink-0">
+                <span data-i18n="privacyConsent">
+                  Confirmo que he leído la política de privacidad y acepto utilizar estos datos para gestionar mi solicitud de traslado.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit"
+                    class="mt-6 w-full inline-flex items-center justify-center gap-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-5 py-4 transition">
+              <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.85 11.85 0 0 0 12.05 0C5.49 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.59 5.95L.08 24l6.3-1.64a11.9 11.9 0 0 0 5.67 1.44h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.43-8.42ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.89 9.89 0 1 1 8.39 4.63Z"/>
+              </svg>
+              <span data-i18n="formSubmit">Enviar solicitud por WhatsApp</span>
+            </button>
+
+            <p class="text-[11px] text-zinc-500 text-center mt-4 leading-relaxed"
+               data-i18n="formDisclaimer">
+              El envío abrirá WhatsApp. No se calcula ni confirma automáticamente una tarifa.
+            </p>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         FREQUENT ROUTES
+    ========================================== -->
+    <section id="rutas" class="py-20 lg:py-28 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="max-w-2xl">
+          <span class="text-[#d4af37] text-xs font-bold uppercase tracking-[.22em]"
+                data-i18n="routesEyebrow">Rutas frecuentes</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold mt-3"
+              data-i18n="routesTitle">
+            Alicante, Costa Blanca y Valencia.
+          </h2>
+          <p class="text-zinc-400 mt-4 leading-relaxed"
+             data-i18n="routesIntro">
+            Transfers privados para turistas, familias, viajeros de negocios
+            y desplazamientos entre ciudades.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+
+          <!-- Route 1 -->
+          <article class="card-hover glass luxury-border rounded-2xl p-5 flex flex-col">
+            <div class="w-11 h-11 rounded-xl bg-[#d4af37]/10 text-[#e8d39a] flex items-center justify-center text-xl">✈</div>
+            <p class="text-[10px] text-zinc-500 font-bold tracking-[.18em] mt-5">AIRPORT TRANSFER</p>
+            <h3 class="font-display text-lg font-bold mt-2" data-i18n="route1Title">
+              Aeropuerto Alicante-Elche
+            </h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed" data-i18n="route1Desc">
+              Alicante centro, hoteles y destinos de la Costa Blanca.
+            </p>
+            <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+              <span class="text-xs text-[#e8d39a]" data-i18n="fixedQuote">Tarifa cerrada bajo presupuesto</span>
+            </div>
+            <button type="button" onclick="chooseRoute('airport')"
+                    class="mt-5 w-full rounded-lg bg-white/5 border border-white/10 hover:border-[#d4af37]/50 py-3 text-sm font-semibold transition"
+                    data-i18n="routeCTA">Solicitar precio →</button>
+          </article>
+
+          <!-- Route 2 -->
+          <article class="card-hover glass luxury-border rounded-2xl p-5 flex flex-col">
+            <div class="w-11 h-11 rounded-xl bg-[#d4af37]/10 text-[#e8d39a] flex items-center justify-center text-xl">⌖</div>
+            <p class="text-[10px] text-zinc-500 font-bold tracking-[.18em] mt-5">COSTA BLANCA</p>
+            <h3 class="font-display text-lg font-bold mt-2" data-i18n="route2Title">
+              Alicante, Benidorm, Altea y Torrevieja
+            </h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed" data-i18n="route2Desc">
+              Traslados directos a hoteles, apartamentos y alojamientos.
+            </p>
+            <div class="mt-5 pt-4 border-t border-white/10">
+              <span class="text-xs text-[#e8d39a]" data-i18n="fixedQuote">Tarifa cerrada bajo presupuesto</span>
+            </div>
+            <button type="button" onclick="chooseRoute('coast')"
+                    class="mt-5 w-full rounded-lg bg-white/5 border border-white/10 hover:border-[#d4af37]/50 py-3 text-sm font-semibold transition"
+                    data-i18n="routeCTA">Solicitar precio →</button>
+          </article>
+
+          <!-- Route 3 -->
+          <article class="card-hover glass luxury-border rounded-2xl p-5 flex flex-col">
+            <div class="w-11 h-11 rounded-xl bg-[#d4af37]/10 text-[#e8d39a] flex items-center justify-center text-xl">↔</div>
+            <p class="text-[10px] text-zinc-500 font-bold tracking-[.18em] mt-5">CITY TO CITY</p>
+            <h3 class="font-display text-lg font-bold mt-2" data-i18n="route3Title">
+              Alicante ↔ Valencia
+            </h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed" data-i18n="route3Desc">
+              Conexiones privadas entre ciudades, estaciones, hoteles y domicilios.
+            </p>
+            <div class="mt-5 pt-4 border-t border-white/10">
+              <span class="text-xs text-[#e8d39a]" data-i18n="fixedQuote">Tarifa cerrada bajo presupuesto</span>
+            </div>
+            <button type="button" onclick="chooseRoute('valencia')"
+                    class="mt-5 w-full rounded-lg bg-white/5 border border-white/10 hover:border-[#d4af37]/50 py-3 text-sm font-semibold transition"
+                    data-i18n="routeCTA">Solicitar precio →</button>
+          </article>
+
+          <!-- Route 4 -->
+          <article class="card-hover glass luxury-border rounded-2xl p-5 flex flex-col">
+            <div class="w-11 h-11 rounded-xl bg-[#d4af37]/10 text-[#e8d39a] flex items-center justify-center text-xl">➜</div>
+            <p class="text-[10px] text-zinc-500 font-bold tracking-[.18em] mt-5">LONG DISTANCE</p>
+            <h3 class="font-display text-lg font-bold mt-2" data-i18n="route4Title">
+              Larga distancia
+            </h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed" data-i18n="route4Desc">
+              Viajes interurbanos, recogidas directas y trayectos personalizados.
+            </p>
+            <div class="mt-5 pt-4 border-t border-white/10">
+              <span class="text-xs text-[#e8d39a]" data-i18n="fixedQuote">Tarifa cerrada bajo presupuesto</span>
+            </div>
+            <button type="button" onclick="chooseRoute('long')"
+                    class="mt-5 w-full rounded-lg bg-white/5 border border-white/10 hover:border-[#d4af37]/50 py-3 text-sm font-semibold transition"
+                    data-i18n="routeCTA">Solicitar precio →</button>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         FLEET
+    ========================================== -->
+    <section id="flota" class="py-20 lg:py-28 bg-[#101010]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="max-w-2xl">
+          <span class="text-[#d4af37] text-xs font-bold uppercase tracking-[.22em]"
+                data-i18n="fleetEyebrow">Nuestra flota</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold mt-3"
+              data-i18n="fleetTitle">
+            Viaja a tu manera.
+          </h2>
+          <p class="text-zinc-400 mt-4 leading-relaxed"
+             data-i18n="fleetIntro">
+            Solicita el vehículo que mejor se adapte al tamaño de tu grupo
+            y a tu equipaje. La disponibilidad se confirma al reservar.
+          </p>
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-[#0a0a0a] text-white">
+          <div class="mx-auto max-w-6xl">
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#d4af37]">
+              Nuestra flota VIP
+            </p>
+
+            <h2 class="mb-8 text-3xl font-bold md:text-4xl">
+              Ford Tourneo Custom <span class="text-[#d4af37]">VIP</span>
+            </h2>
+
+            <div class="overflow-hidden rounded-2xl border border-white/10 bg-[#121212] shadow-2xl md:flex">
+              <!-- Imagen de la Ford -->
+              <div class="md:w-3/5">
+                <img
+                  src="./ford.jpg"
+                  alt="Ford Tourneo Custom para traslados VIP en Alicante y Valencia"
+                  class="h-72 w-full object-cover md:h-full md:min-h-[360px]"
+                  loading="lazy" referrerpolicy="no-referrer"
+                >
+              </div>
+
+              <!-- Información del vehículo -->
+              <div class="flex flex-col justify-center p-7 md:w-2/5 md:p-10">
+                <span class="mb-4 text-sm text-[#d4af37]">
+                  CONFORT · ESPACIO · EXCLUSIVIDAD
+                </span>
+
+                <h3 class="mb-4 text-2xl font-bold">
+                  Viaja con total comodidad
+                </h3>
+
+                <p class="mb-6 leading-relaxed text-gray-400">
+                  Traslados privados al aeropuerto de Alicante-Elche, Benidorm,
+                  Costa Blanca y Valencia. Ideal para familias, grupos y viajeros
+                  con equipaje.
+                </p>
+
+                <a
+                  href="https://wa.me/34643669611?text=Hello%20%2F%20Hola%2C%20I%20want%20to%20book%20a%20transfer%20%2F%20Quiero%20reservar%20un%20transfer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center rounded-xl bg-[#d4af37] px-6 py-4 font-bold text-black transition hover:bg-[#e8c85a]"
+                >
+                  Reservar por WhatsApp →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5 mt-10">
+
+          <article class="card-hover relative overflow-hidden rounded-2xl min-h-[340px] bg-gradient-to-br from-[#1b1b1b] to-[#0b0b0b] luxury-border p-7 sm:p-9 flex flex-col justify-end">
+            <div class="absolute top-0 right-0 w-52 h-52 rounded-full bg-[#d4af37]/5 blur-3xl"></div>
+            <div class="relative">
+              <span class="text-[10px] text-[#d4af37] font-bold tracking-[.2em]"
+                    data-i18n="sedanLabel">EXECUTIVE CLASS</span>
+              <h3 class="font-display text-2xl font-extrabold mt-3"
+                  data-i18n="sedanTitle">Berlina ejecutiva</h3>
+              <p class="text-zinc-400 mt-3 text-sm leading-relaxed"
+                 data-i18n="sedanDesc">
+                Una opción cómoda para viajes privados, desplazamientos
+                de negocios y traslados al aeropuerto.
+              </p>
+              <div class="text-xs text-zinc-300 mt-5" data-i18n="sedanCapacity">
+                Ideal para 1–4 pasajeros*
+              </div>
+              <button type="button" onclick="chooseVehicle('sedan')"
+                      class="mt-6 inline-flex items-center justify-center rounded-lg bg-white text-black hover:bg-[#d4af37] px-5 py-3 text-sm font-bold transition"
+                      data-i18n="vehicleCTA">Consultar disponibilidad</button>
+            </div>
+          </article>
+
+          <article class="card-hover relative overflow-hidden rounded-2xl min-h-[340px] bg-gradient-to-br from-[#211c10] to-[#0b0b0b] gold-border p-7 sm:p-9 flex flex-col justify-end">
+            <div class="absolute top-0 right-0 w-52 h-52 rounded-full bg-[#d4af37]/10 blur-3xl"></div>
+            <div class="relative">
+              <span class="text-[10px] text-[#d4af37] font-bold tracking-[.2em]"
+                    data-i18n="vanLabel">VIP GROUP TRANSFER</span>
+              <h3 class="font-display text-2xl font-extrabold mt-3"
+                  data-i18n="vanTitle">Monovolumen / Van VIP</h3>
+              <p class="text-zinc-400 mt-3 text-sm leading-relaxed"
+                 data-i18n="vanDesc">
+                Para grupos, familias y viajeros que necesitan espacio
+                adicional para su equipaje.
+              </p>
+              <div class="text-xs text-zinc-300 mt-5" data-i18n="vanCapacity">
+                Capacidad según vehículo disponible*
+              </div>
+              <button type="button" onclick="chooseVehicle('van')"
+                      class="mt-6 inline-flex items-center justify-center rounded-lg bg-[#d4af37] text-black hover:bg-[#e8d39a] px-5 py-3 text-sm font-bold transition"
+                      data-i18n="vehicleCTA">Consultar disponibilidad</button>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="text-xs text-zinc-600 mt-4" data-i18n="fleetNote">
+          *La capacidad real de pasajeros y equipaje debe confirmarse antes de aceptar el servicio.
+        </p>
+
+      </div>
+    </section>
+
+        <!-- =========================================
+         BENEFITS
+    ========================================== -->
+    <section class="py-20 lg:py-28 bg-[#0a0a0a]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div class="max-w-2xl">
+          <span class="text-[#d4af37] text-xs font-bold uppercase tracking-[.22em]"
+                data-i18n="benefitsEyebrow">La experiencia VIP</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold mt-3"
+              data-i18n="benefitsTitle">
+            Un viaje cómodo desde el primer contacto.
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+
+          <article class="card-hover luxury-border rounded-2xl p-6">
+            <div class="text-2xl text-[#d4af37]">◈</div>
+            <h3 class="font-bold mt-5" data-i18n="benefit1Title">Atención personalizada</h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed"
+               data-i18n="benefit1Desc">
+              Coordinación del servicio según tu ruta y tus necesidades.
+            </p>
+          </article>
+
+          <article class="card-hover luxury-border rounded-2xl p-6">
+            <div class="text-2xl text-[#d4af37]">✈</div>
+            <h3 class="font-bold mt-5" data-i18n="benefit2Title">Información del vuelo</h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed"
+               data-i18n="benefit2Desc">
+              Facilita el número de vuelo para coordinar la recogida.
+            </p>
+          </article>
+
+          <article class="card-hover luxury-border rounded-2xl p-6">
+            <div class="text-2xl text-[#d4af37]">£ €</div>
+            <h3 class="font-bold mt-5" data-i18n="benefit3Title">Presupuesto previo</h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed"
+               data-i18n="benefit3Desc">
+              Consulta la tarifa y las condiciones antes de confirmar.
+            </p>
+          </article>
+
+          <article class="card-hover luxury-border rounded-2xl p-6">
+            <div class="text-2xl text-[#d4af37]">↗</div>
+            <h3 class="font-bold mt-5" data-i18n="benefit4Title">Reserva sencilla</h3>
+            <p class="text-sm text-zinc-400 mt-2 leading-relaxed"
+               data-i18n="benefit4Desc">
+              Envía todos los detalles en un único mensaje de WhatsApp.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         FINAL CTA
+    ========================================== -->
+    <section class="relative overflow-hidden py-20 lg:py-28 bg-[#111]">
+      <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+
+      <div class="relative max-w-4xl mx-auto px-5 text-center">
+
+        <span class="text-[#d4af37] text-xs font-bold uppercase tracking-[.22em]"
+              data-i18n="finalEyebrow">Tu próximo destino te espera</span>
+
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-5 leading-tight"
+            data-i18n="finalTitle">
+          ¿Necesitas un traslado en Alicante o Valencia?
+        </h2>
+
+        <p class="text-zinc-400 mt-5 max-w-2xl mx-auto leading-relaxed"
+           data-i18n="finalDesc">
+          Envíanos los detalles de tu viaje y solicita un presupuesto personalizado.
+          Servicio orientado tanto a viajeros locales como internacionales.
+        </p>
+
+        <a href="#reserva"
+           class="mt-8 inline-flex items-center justify-center gap-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-7 py-4 transition">
+          <span data-i18n="finalCTA">Solicitar presupuesto por WhatsApp</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+  <footer class="bg-[#050505] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-9">
+
+      <div class="flex flex-col md:flex-row justify-between gap-7">
+
+        <div>
+          <div class="font-display font-extrabold text-sm tracking-wide">
+            ALICANTE <span class="text-[#d4af37]">&</span> VALENCIA
+          </div>
+          <div class="text-[#d4af37] text-[10px] font-bold tracking-[.22em] mt-1">
+            VIP TRANSFERS
+          </div>
+          <p class="text-xs text-zinc-500 mt-3" data-i18n="footerTagline">
+            Transporte privado · Costa Blanca · Valencia
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-5 gap-y-3 text-xs text-zinc-400">
+          <a href="politica-privacidad.html" class="hover:text-[#d4af37] transition"
+             data-i18n="privacyLink">Política de privacidad</a>
+          <a href="aviso-legal.html" class="hover:text-[#d4af37] transition"
+             data-i18n="legalLink">Aviso legal</a>
+          <a href="#reserva" class="hover:text-[#d4af37] transition"
+             data-i18n="contactLink">Contacto y reservas</a>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/5 mt-7 pt-5 text-[11px] text-zinc-600 leading-relaxed">
+        <p>© <span id="currentYear">2026</span> Alicante & Valencia VIP Transfers. <span data-i18n="copyright">Todos los derechos reservados.</span></p>
+        <p class="mt-2" data-i18n="legalDisclaimer">
+          Los tiempos de viaje y la disponibilidad son orientativos. Las tarifas,
+          condiciones del servicio y características del vehículo se confirmarán
+          antes de aceptar la reserva. Los servicios están sujetos a disponibilidad
+          y a las autorizaciones aplicables.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================
+       FLOATING WHATSAPP
+  ========================================== -->
+  <a id="floatingWhatsApp"
+     href="#reserva"
+     aria-label="Solicitar un transfer por WhatsApp"
+     class="whatsapp-pulse fixed bottom-5 right-5 z-[100] w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-2xl transition hover:scale-105">
+
+    <svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.52 3.48A11.85 11.85 0 0 0 12.05 0C5.49 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.59 5.95L.08 24l6.3-1.64a11.9 11.9 0 0 0 5.67 1.44h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.43-8.42ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.89 9.89 0 1 1 8.39 4.63Z"/>
+    </svg>
+  </a>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+  <script>
+    /*
+      Número de WhatsApp en formato internacional,
+      sin +, espacios ni guiones.
+    */
+    const WHATSAPP_NUMBER = "34643669611";
+
+    const translations = {
+      es: {
+        navCTA: "Reservar Transfer",
+        navShort: "Reservar",
+        heroBadge: "Transporte privado · Alicante & Valencia",
+        heroLine1: "Tu transporte privado",
+        heroLine2: "de primera clase",
+        heroLine3: "en Alicante y Valencia",
+        heroDescription: "Traslados al Aeropuerto de Alicante-Elche, hoteles de la Costa Blanca, Benidorm, Torrevieja y conexiones con Valencia. Comodidad, atención personalizada y presupuestos a medida.",
+        heroCTA: "Solicitar transfer",
+        heroSecondary: "Ver rutas frecuentes",
+        stat1: "Alicante y alrededores",
+        stat2: "Presupuesto antes de reservar",
+        stat3: "Traslados privados a medida",
+        heroNote: "*Confirma disponibilidad de atención en inglés y características del vehículo al reservar.",
+
+        formEyebrow: "Solicitud de reserva",
+        formTitle: "Tu viaje comienza aquí.",
+        formIntro: "Cuéntanos los detalles del traslado. Prepararemos tu solicitud para que puedas enviarla por WhatsApp y recibir una tarifa personalizada según la ruta y tus necesidades.",
+        step1Title: "Completa el formulario",
+        step1Desc: "Origen, destino, fecha y pasajeros.",
+        step2Title: "Envía tu solicitud",
+        step2Desc: "WhatsApp abrirá el mensaje preparado.",
+        step3Title: "Confirma tu presupuesto",
+        step3Desc: "El precio se confirma antes de reservar.",
+        formTipTitle: "¿Llegas en avión?",
+        formTip: "Añade tu número de vuelo para facilitar la coordinación de la recogida.",
+        formCardTitle: "Detalles del traslado",
+        pickupLabel: "Origen / Dirección de recogida *",
+        pickupPlaceholder: "Aeropuerto, dirección, hotel...",
+        destinationLabel: "Destino / Hotel *",
+        destinationPlaceholder: "Benidorm, Alicante, Valencia...",
+        passengersLabel: "Número de pasajeros *",
+        selectPassengers: "Seleccionar",
+        luggageLabel: "Número de maletas *",
+        selectLuggage: "Seleccionar",
+        dateLabel: "Fecha del traslado *",
+        timeLabel: "Hora de recogida / llegada *",
+        flightLabel: "Número de vuelo",
+        optional: "(opcional)",
+        flightPlaceholder: "Ej. BA1234",
+        flightHelp: "Si no viajas en avión, puedes dejar este campo vacío.",
+        notesLabel: "Detalles adicionales",
+        notesPlaceholder: "Sillas infantiles, necesidades especiales, hora del vuelo...",
+        privacyConsent: "Confirmo que he leído la política de privacidad y acepto utilizar estos datos para gestionar mi solicitud de traslado.",
+        formSubmit: "Enviar solicitud por WhatsApp",
+        formDisclaimer: "El envío abrirá WhatsApp. No se calcula ni confirma automáticamente una tarifa.",
+
+        routesEyebrow: "Rutas frecuentes",
+        routesTitle: "Alicante, Costa Blanca y Valencia.",
+        routesIntro: "Transfers privados para turistas, familias, viajeros de negocios y desplazamientos entre ciudades.",
+        route1Title: "Aeropuerto Alicante-Elche",
+        route1Desc: "Alicante centro, hoteles y destinos de la Costa Blanca.",
+        route2Title: "Alicante, Benidorm, Altea y Torrevieja",
+        route2Desc: "Traslados directos a hoteles, apartamentos y alojamientos.",
+        route3Title: "Alicante ↔ Valencia",
+        route3Desc: "Conexiones privadas entre ciudades, estaciones, hoteles y domicilios.",
+        route4Title: "Larga distancia",
+        route4Desc: "Viajes interurbanos, recogidas directas y trayectos personalizados.",
+        fixedQuote: "Tarifa cerrada bajo presupuesto",
+        routeCTA: "Solicitar precio →",
+
+        fleetEyebrow: "Nuestra flota",
+        fleetTitle: "Viaja a tu manera.",
+        fleetIntro: "Solicita el vehículo que mejor se adapte al tamaño de tu grupo y a tu equipaje. La disponibilidad se confirma al reservar.",
+        sedanLabel: "EXECUTIVE CLASS",
+        sedanTitle: "Berlina ejecutiva",
+        sedanDesc: "Una opción cómoda para viajes privados, desplazamientos de negocios y traslados al aeropuerto.",
+        sedanCapacity: "Ideal para 1–4 pasajeros*",
+        vanLabel: "VIP GROUP TRANSFER",
+        vanTitle: "Monovolumen / Van VIP",
+        vanDesc: "Para grupos, familias y viajeros que necesitan espacio adicional para su equipaje.",
+        vanCapacity: "Capacidad según vehículo disponible*",
+        vehicleCTA: "Consultar disponibilidad",
+        fleetNote: "*La capacidad real de pasajeros y equipaje debe confirmarse antes de aceptar el servicio.",
+
+        benefitsEyebrow: "La experiencia VIP",
+        benefitsTitle: "Un viaje cómodo desde el primer contacto.",
+        benefit1Title: "Atención personalizada",
+        benefit1Desc: "Coordinación del servicio según tu ruta y tus necesidades.",
+        benefit2Title: "Información del vuelo",
+        benefit2Desc: "Facilita el número de vuelo para coordinar la recogida.",
+        benefit3Title: "Presupuesto previo",
+        benefit3Desc: "Consulta la tarifa y las condiciones antes de confirmar.",
+        benefit4Title: "Reserva sencilla",
+        benefit4Desc: "Envía todos los detalles en un único mensaje de WhatsApp.",
+
+        finalEyebrow: "Tu próximo destino te espera",
+        finalTitle: "¿Necesitas un traslado en Alicante o Valencia?",
+        finalDesc: "Envíanos los detalles de tu viaje y solicita un presupuesto personalizado. Servicio orientado tanto a viajeros locales como internacionales.",
+        finalCTA: "Solicitar presupuesto por WhatsApp",
+        footerTagline: "Transporte privado · Costa Blanca · Valencia",
+        privacyLink: "Política de privacidad",
+        legalLink: "Aviso legal",
+        contactLink: "Contacto y reservas",
+        copyright: "Todos los derechos reservados.",
+        legalDisclaimer: "Los tiempos de viaje y la disponibilidad son orientativos. Las tarifas, condiciones del servicio y características del vehículo se confirmarán antes de aceptar la reserva. Los servicios están sujetos a disponibilidad y a las autorizaciones aplicables."
+      },
+
+      en: {
+        navCTA: "Book Your Transfer",
+        navShort: "Book",
+        heroBadge: "Private transfers · Alicante & Valencia",
+        heroLine1: "Your private transport",
+        heroLine2: "first-class service",
+        heroLine3: "in Alicante & Valencia",
+        heroDescription: "Transfers to Alicante-Elche Airport, Costa Blanca hotels, Benidorm, Torrevieja and Valencia. Enjoy private transport, personalised service and tailored quotes.",
+        heroCTA: "Request a Transfer",
+        heroSecondary: "Explore Popular Routes",
+        stat1: "Alicante & surroundings",
+        stat2: "Quote before booking",
+        stat3: "Private transfers tailored to you",
+        heroNote: "*Please confirm English-language support and vehicle specifications when booking.",
+
+        formEyebrow: "Booking request",
+        formTitle: "Your journey starts here.",
+        formIntro: "Tell us about your transfer. Your details will be organised into a WhatsApp message so the driver can review your route and provide a tailored quote.",
+        step1Title: "Complete the form",
+        step1Desc: "Pickup, destination, date and passengers.",
+        step2Title: "Send your request",
+        step2Desc: "WhatsApp opens with your message prepared.",
+        step3Title: "Confirm your quote",
+        step3Desc: "Your price is confirmed before booking.",
+        formTipTitle: "Arriving by plane?",
+        formTip: "Add your flight number to help coordinate your pickup.",
+        formCardTitle: "Transfer details",
+        pickupLabel: "Pickup address / location *",
+        pickupPlaceholder: "Airport, address, hotel...",
+        destinationLabel: "Destination / Hotel *",
+        destinationPlaceholder: "Benidorm, Alicante, Valencia...",
+        passengersLabel: "Number of passengers *",
+        selectPassengers: "Select",
+        luggageLabel: "Number of suitcases *",
+        selectLuggage: "Select",
+        dateLabel: "Transfer date *",
+        timeLabel: "Pickup / arrival time *",
+        flightLabel: "Flight number",
+        optional: "(optional)",
+        flightPlaceholder: "e.g. BA1234",
+        flightHelp: "Leave this field blank if you are not travelling by plane.",
+        notesLabel: "Additional details",
+        notesPlaceholder: "Child seats, special requirements, flight arrival time...",
+        privacyConsent: "I confirm that I have read the privacy policy and agree to the use of these details to manage my transfer request.",
+        formSubmit: "Send Request via WhatsApp",
+        formDisclaimer: "WhatsApp will open with your request. A fare is not calculated or confirmed automatically.",
+
+        routesEyebrow: "Popular routes",
+        routesTitle: "Alicante, Costa Blanca & Valencia.",
+        routesIntro: "Private transfers for tourists, families, business travellers and journeys between cities.",
+        route1Title: "Alicante-Elche Airport",
+        route1Desc: "Alicante city centre, hotels and Costa Blanca destinations.",
+        route2Title: "Alicante, Benidorm, Altea & Torrevieja",
+        route2Desc: "Direct transfers to hotels, apartments and accommodation.",
+        route3Title: "Alicante ↔ Valencia",
+        route3Desc: "Private connections between cities, stations, hotels and addresses.",
+        route4Title: "Long-distance transfers",
+        route4Desc: "Intercity journeys, direct pickups and tailored trips.",
+        fixedQuote: "Fixed quote on request",
+        routeCTA: "Request a Quote →",
+
+        fleetEyebrow: "Our fleet",
+        fleetTitle: "Travel your way.",
+        fleetIntro: "Request the vehicle that best suits your group and luggage. Availability is confirmed when booking.",
+        sedanLabel: "EXECUTIVE CLASS",
+        sedanTitle: "Executive Saloon",
+        sedanDesc: "A comfortable option for private journeys, business travel and airport transfers.",
+        sedanCapacity: "Ideal for 1–4 passengers*",
+        vanLabel: "VIP GROUP TRANSFER",
+        vanTitle: "VIP MPV / Van",
+        vanDesc: "For groups, families and travellers requiring extra luggage space.",
+        vanCapacity: "Capacity depends on available vehicle*",
+        vehicleCTA: "Check Availability",
+        fleetNote: "*Actual passenger and luggage capacity must be confirmed before accepting the booking.",
+
+        benefitsEyebrow: "The VIP experience",
+        benefitsTitle: "A comfortable journey from the first contact.",
+        benefit1Title: "Personalised service",
+        benefit1Desc: "Your transfer is coordinated around your route and requirements.",
+        benefit2Title: "Flight details",
+        benefit2Desc: "Provide your flight number to help coordinate the pickup.",
+        benefit3Title: "Quote in advance",
+        benefit3Desc: "Check the fare and service conditions before confirming.",
+        benefit4Title: "Easy booking",
+        benefit4Desc: "Send all your details in a single WhatsApp message.",
+
+        finalEyebrow: "Your next destination awaits",
+        finalTitle: "Need a transfer in Alicante or Valencia?",
+        finalDesc: "Send us your journey details and request a personalised quote. Designed for local and international travellers.",
+        finalCTA: "Request a Quote on WhatsApp",
+        footerTagline: "Private transfers · Costa Blanca · Valencia",
+        privacyLink: "Privacy Policy",
+        legalLink: "Legal Notice",
+        contactLink: "Contact & Bookings",
+        copyright: "All rights reserved.",
+        legalDisclaimer: "Journey times and availability are indicative. Fares, service conditions and vehicle specifications will be confirmed before the booking is accepted. Services are subject to availability and applicable authorisations."
+      }
+    };
+
+    let currentLanguage = "es";
+
+    function setLanguage(language) {
+      currentLanguage = language === "en" ? "en" : "es";
+      document.documentElement.lang = currentLanguage;
+
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.getAttribute("data-i18n");
+        const value = translations[currentLanguage][key];
+
+        if (value !== undefined) {
+          element.textContent = value;
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+        const key = element.getAttribute("data-i18n-placeholder");
+        const value = translations[currentLanguage][key];
+
+        if (value !== undefined) {
+          element.placeholder = value;
+        }
+      });
+
+      document.getElementById("langES").className =
+        "language-button rounded-full px-2.5 py-1.5 " +
+        (currentLanguage === "es"
+          ? "bg-[#d4af37] text-black"
+          : "text-zinc-400 hover:text-white");
+
+      document.getElementById("langEN").className =
+        "language-button rounded-full px-2.5 py-1.5 " +
+        (currentLanguage === "en"
+          ? "bg-[#d4af37] text-black"
+          : "text-zinc-400 hover:text-white");
+
+      document.getElementById("langES").setAttribute(
+        "aria-pressed", String(currentLanguage === "es")
+      );
+      document.getElementById("langEN").setAttribute(
+        "aria-pressed", String(currentLanguage === "en")
+      );
+
+      document.title = currentLanguage === "en"
+        ? "Alicante & Valencia VIP Transfers | Private Airport Transfers"
+        : "Alicante & Valencia VIP Transfers | Transporte Privado";
+    }
+
+    function openWhatsApp(message) {
+      const url =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function getReservationTemplate(data = {}) {
+      const pickup = data.pickup || "";
+      const destination = data.destination || "";
+      const flight = data.flight || "";
+      const passengers = data.passengers || "";
+      const luggage = data.luggage || "";
+      const date = data.date || "";
+      const time = data.time || "";
+      const notes = data.notes || "";
+
+      return `Hello / Hola, I want to book a transfer / Quiero reservar un transfer:
+
+- Pick-up / Origen: ${pickup}
+- Destination / Destino: ${destination}
+- Flight No. / Nº Vuelo: ${flight || "N/A"}
+- Passengers / Pasajeros: ${passengers}
+- Luggage / Maletas: ${luggage}
+- Date & Time / Fecha y Hora: ${date} ${time}${notes ? "\n- Additional details / Detalles adicionales: " + notes : ""}
+
+Please calculate the route distance and send me your exact transfer fare.
+Por favor, calcula la distancia de la ruta y envíame la tarifa exacta del traslado.`;
+    }
+
+    /*
+      Required form fields are validated by the browser.
+      The form does not store or transmit information to a server.
+      It opens WhatsApp with the user's prepared message.
+    */
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      const data = {
+        pickup: String(formData.get("pickup") || "").trim(),
+        destination: String(formData.get("destination") || "").trim(),
+        passengers: String(formData.get("passengers") || ""),
+        luggage: String(formData.get("luggage") || ""),
+        date: String(formData.get("date") || ""),
+        time: String(formData.get("time") || ""),
+        flight: String(formData.get("flight") || "").trim(),
+        notes: String(formData.get("notes") || "").trim()
+      };
+
+      openWhatsApp(getReservationTemplate(data));
+    });
+
+    /*
+      Popular route buttons scroll to the form and prefill the
+      pickup and destination fields. The user can edit them.
+    */
+    function chooseRoute(route) {
+      const pickup = document.getElementById("pickup");
+      const destination = document.getElementById("destination");
+
+      const routes = {
+        airport: {
+          pickup: "Alicante-Elche Airport / Aeropuerto Alicante-Elche",
+          destination: "Alicante city centre, hotel or Costa Blanca / Alicante centro, hotel o Costa Blanca"
+        },
+        coast: {
+          pickup: "Alicante / Alicante",
+          destination: "Benidorm, Altea or Torrevieja / Benidorm, Altea o Torrevieja"
+        },
+        valencia: {
+          pickup: "Alicante / Alicante",
+          destination: "Valencia / Valencia"
+        },
+        long: {
+          pickup: "Please specify pickup address / Indicar dirección de recogida",
+          destination: "Long-distance destination / Destino de larga distancia"
+        }
+      };
+
+      const selected = routes[route];
+      if (!selected) return;
+
+      pickup.value = selected.pickup;
+      destination.value = selected.destination;
+
+      document.getElementById("reserva").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      window.setTimeout(() => destination.focus({ preventScroll: true }), 450);
+    }
+
+    function chooseVehicle(vehicle) {
+      const notes = document.getElementById("notes");
+
+      notes.value = vehicle === "van"
+        ? "Vehicle preference / Preferencia de vehículo: VIP MPV or van / Monovolumen o van VIP. Please confirm capacity / Confirmar capacidad."
+        : "Vehicle preference / Preferencia de vehículo: Executive saloon / Berlina ejecutiva. Please confirm availability / Confirmar disponibilidad.";
+
+      document.getElementById("reserva").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      window.setTimeout(() => notes.focus({ preventScroll: true }), 450);
+    }
+
+    // Local date as minimum booking date; no past dates can be selected.
+    const dateInput = document.getElementById("date");
+    const now = new Date();
+    const localToday = [
+      now.getFullYear(),
+      String(now.getMonth() + 1).padStart(2, "0"),
+      String(now.getDate()).padStart(2, "0")
+    ].join("-");
+
+    dateInput.min = localToday;
+
+    // Update copyright year automatically.
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Floating WhatsApp button takes the user to the booking form.
+    document.getElementById("floatingWhatsApp").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("reserva").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  </script>
+
+</body>
+</html>
